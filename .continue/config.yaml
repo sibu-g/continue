@@ -3,9 +3,9 @@ version: 0.0.1
 schema: v1
 
 models:
-  - name: claude-opus
+  - name: nvidia-llama-nemotron-rerank
     provider: openrouter
-    model: anthropic/claude-opus-4-1
+    model: nvidia/llama-nemotron-rerank-vl-1b-v2:free
     apiKey: ${OPENROUTER_API_KEY}
     completionOptions:
       maxTokens: 8192
@@ -15,9 +15,9 @@ models:
       - edit
       - autocomplete
 
-  - name: claude-sonnet
+  - name: nvidia-nemotron-content-safety
     provider: openrouter
-    model: anthropic/claude-sonnet-4-6
+    model: nvidia/nemotron-3.5-content-safety:free
     apiKey: ${OPENROUTER_API_KEY}
     completionOptions:
       maxTokens: 4096
@@ -26,9 +26,9 @@ models:
       - chat
       - edit
 
-  - name: claude-haiku
+  - name: google-gemma-4-26b
     provider: openrouter
-    model: anthropic/claude-3-5-haiku-20241022
+    model: google/gemma-4-26b-a4b-it:free
     apiKey: ${OPENROUTER_API_KEY}
     completionOptions:
       maxTokens: 2048
